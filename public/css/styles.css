@@ -5,7 +5,13 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 :root {
+    
     --bg-header-mobile: url(../imagens/bg-header-mobile-light.png);
+    --inputbox-shadow: rgba(194, 195, 214, 0.58);
+    --input-color:#494C6B;
+    --button-color:#393A4B;
+  
+
 }
 header {
     background-image: var(--bg-header-mobile);
@@ -26,4 +32,25 @@ header.div{
 header.div h1{
     color: #fff;
     text-transform: uppercase;
+}
+header form{
+    display: flex;
+    gap: 0.4rem;
+}
+header form input{
+    padding: 1.12rem;
+    border-radius: 0.3125rem;
+    border: none;
+    box-shadow: 0px 35px 58px -15px var(--input-box-shadow);
+    width: 100%;
+    outline: none;
+    font-size: 0.75rem;
+    color: var(--input-color);
+}
+header form button{
+    padding: 0.75rem;
+    border-radius: 0.3125rem;
+    border: none;
+    background: var(--button-color);
+    color: #fff;
 }
