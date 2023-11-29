@@ -7,8 +7,10 @@
 :root {
     
     --bg-header-mobile: url(../imagens/bg-header-mobile-light.png);
+    --bg-header-desktop: url(../imagens/bg-header-desktop-light.png);
     --inputbox-shadow: rgba(194, 195, 214, 0.58);
     --input-color:#494C6B;
+    --placeholder-color: #9495A5;
     --button-color:#393A4B;
     --bg-body: #fAfAfA;
     --bg-tarefas : #fff;
@@ -16,6 +18,9 @@
     --border-color: #E3E4F1;
     --text-color: #494C6B;
     --info-text-color: #9495A5;
+    --button-color-hoover:#494C6B;
+    --info-button-hover:#494C6B;
+    --info-button-active: #3A7CFD;
 
 
 }
@@ -60,6 +65,9 @@ header form input{
     font-size: 0.75rem;
     color: var(--input-color);
 }
+header form input::placeholder {
+    color: var(--placeholder-color);
+}
 header form button{
     padding: 0.75rem;
     border-radius: 0.3125rem;
@@ -68,8 +76,7 @@ header form button{
     color: #fff;
 }
 main{
-  
-    min-height: calc(100vh - 12.5rem);
+
     padding-inline: 1.75rem;
 }
 .tarefas{
@@ -132,6 +139,38 @@ main{
     font-size: 0.875rem ;
 }
 @media(min-width: 1000px) {
+    header{
+        background-image: var(--bg-header-desktop);
+        height: 18.75rem;
+        padding-top: 4.37;
+    }
+    header div div{
+        margin-bottom: 3rem;
+
+    }
+    .tarefas {
+        margin-top: -3rem;
+    }
+    .tarefas .tarefa {
+        padding: 1.25rem 1.5rem;
+    }
+    .tarefa div{
+        font-size: 1.125rem;
+    }
+    header form input{
+        padding: 1.25rem 1.5rem;
+        font-size: 1.125rem;
+    }
+    header form button{
+        font-size: 1.125rem;
+    }
+    header form button:hover{
+        cursor: pointer;
+        background: var(--button-color-hoover);
+
+    }
+
+
     section.botoes{
         display: none;
     }
@@ -141,6 +180,12 @@ main{
         padding: 0;
         margin-top: 0;
         gap: 2rem;
+    }
+    .informacoes{
+        font-size: 0.875rem;
+    }
+    .informacoes a:hover {
+        color: var(--info-button-hover);
     }
     .tarefa button {
         visibility: hidden;
@@ -152,5 +197,8 @@ main{
     .tarefa:hover button{
         visibility: initial;
     }
+}
+.botoes .active{
+    color: var(--info-button-active);
 }
 
