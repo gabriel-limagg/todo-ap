@@ -30,7 +30,7 @@ header {
     height: 12.5rem;
     padding: 3rem 1.75rem 0;
 }
-header.div{
+header div{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +38,7 @@ header.div{
     margin-bottom: 2.5rem;
 
 }
-header.div h1{
+header div h1{
     color: #fff;
     text-transform: uppercase;
 }
@@ -89,7 +89,7 @@ main{
     align-items: center;
     gap: 0.75rem;
     color: var(--text-color);
-    font-size: 0.175rem;
+    font-size: 0.75rem;
 
 }
 .tarefa button{
@@ -102,5 +102,11 @@ main{
     padding: 1rem 1.25rem;
     display: flex;
     justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--info-text-color);
 
+}
+.informacoes a {
+    text-decoration: none;
+    color: var(--info-text-color);
 }
