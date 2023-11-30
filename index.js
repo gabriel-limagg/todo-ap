@@ -68,6 +68,9 @@ app.post('/criar', (requisicao, reposta)=>{
         resposta.redirect('/')
     })
 })
+app.get('/ativas', (requisicao, respostas)=>{
+    
+})
 
 app.get('/',(requisiçao, resposta)=>{
     const sql = 'SELECT * FROM tarefas'
